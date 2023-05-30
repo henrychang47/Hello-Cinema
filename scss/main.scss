@@ -1,0 +1,50 @@
+@use 'navbar.scss';
+@use 'bannerSlider.scss';
+@use 'hotmovies.scss';
+@use 'hotmoviesSlider.scss';
+@use 'infos.scss';
+@use 'footer.scss';
+
+:root {
+  --orange: #ff8c3e;
+  --green: #08c19d;
+  --purple: #a37cd1;
+  --yellow: #f7c443;
+  --aqua: #28b2d3;
+  --pink: #fc7070;
+  --blue: #4a90e2;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  font-weight: 600;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+img {
+  padding: 0;
+  margin: 0;
+}

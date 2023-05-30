@@ -1,0 +1,361 @@
+.hotmovies {
+  width: 100%;
+  margin-bottom: 60px;
+
+  .container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .title {
+    writing-mode: vertical-lr;
+    font-size: 2.5rem;
+    font-weight: 700;
+    width: 44px;
+
+    .light {
+      font-weight: 300;
+    }
+  }
+
+  .items {
+    width: 1140px;
+    height: 590px;
+    display: grid;
+    grid-template-columns: 4fr 3fr 3fr;
+    grid-template-rows: 1.5fr 1fr 1.5fr 1fr;
+  }
+
+  .item-img,
+  .item-body {
+    border: 1px solid rgba(211, 211, 211, 0.5);
+  }
+
+  .item-img {
+    background-position: center;
+    background-size: cover;
+    border: none;
+  }
+
+  .item-body {
+    padding: 14px 22px;
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-template-rows: 25px 15px auto;
+    gap: 5px;
+  }
+
+  .item-title {
+    grid-area: 1/2/2/3;
+    font-size: 20px;
+  }
+
+  .item-entitle {
+    grid-area: 2/2/3/3;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #888888;
+    font-weight: 400;
+  }
+
+  .item-title,
+  .item-entitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.hotmovies .item-title.hot1 {
+  grid-area: 1/2/2/3;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.hotmovies .item-entitle.hot1 {
+  grid-area: 2/2/3/3;
+  font-size: 20px;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hotmovies .item-img.hot1 {
+  grid-area: 1 / 1 / 3 / 2;
+  background-image: url("../assets/hotmovies/hot1.jpg");
+}
+
+.hotmovies .item-body.hot1 {
+  grid-area: 3 / 1 / 5 / 2;
+  border-right: none;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 40px auto;
+  grid-template-rows: 40px 20px auto;
+  gap: 10px;
+}
+
+.hotmovies .item-img.hot2 {
+  grid-area: 1 / 2 / 2 / 3;
+  background-image: url("../assets/hotmovies/hot2.jpg");
+}
+
+.hotmovies .item-body.hot2 {
+  grid-area: 2 / 2 / 3 / 3;
+  border-right: none;
+}
+
+.hotmovies .item-img.hot3 {
+  grid-area: 1 / 3 / 2 / 4;
+  background-image: url("../assets/hotmovies/hot3.jpg");
+}
+
+.hotmovies .item-body.hot3 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.hotmovies .item-img.hot4 {
+  grid-area: 3 / 2 / 3 / 3;
+  background-image: url("../assets/hotmovies/hot4.jpg");
+}
+
+.hotmovies .item-body.hot4 {
+  grid-area: 4 / 2 / 5 / 3;
+  border-right: none;
+}
+
+.hotmovies .item-img.hot5 {
+  grid-area: 3 / 3 / 4 / 4;
+  background-image: url("../assets/hotmovies/hot5.jpg");
+}
+
+.item-no.hot1 {
+  width: 38px;
+  display: inline-block;
+}
+
+.item-no.hot1::before,
+.item-no.hot2::before,
+.item-no.hot3::before {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 34px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.item-no.hot1::before {
+  background-image: url("../assets/icons/indexhot-no1.svg");
+}
+
+.item-no.hot2::before {
+  background-image: url("../assets/icons/indexhot-no2.svg");
+}
+
+.item-no.hot3::before {
+  background-image: url("../assets/icons/indexhot-no3.svg");
+}
+
+.item-no.hot1::after,
+.item-no.hot2::after,
+.item-no.hot3::after,
+.item-no.hot4::after,
+.item-no.hot5::after {
+  display: block;
+  width: 38px;
+  height: 34px;
+  font-size: 3em;
+  font-weight: 500;
+  font-family: "Monotype Corsiva", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+.item-no.hot1::after {
+  content: "1";
+  color: #f7b90b;
+}
+
+.item-no.hot2::after {
+  content: "2";
+  color: #9fa0a0;
+}
+
+.item-no.hot3::after {
+  content: "3";
+  color: #c9a063;
+}
+
+.item-no.hot4::after {
+  content: "4";
+  color: #727171;
+}
+
+.item-no.hot5::after {
+  content: "5";
+  color: #727171;
+}
+
+.item-buttons {
+  grid-area: 3/2/4/3;
+}
+
+.hot1 .item-buttons {
+  padding-top: 20px;
+}
+
+.item-buttons .booking {
+  width: 90px;
+  height: 32px;
+  margin-right: 10px;
+  color: #08c19d;
+  border: 1px solid #08c19d;
+  background-color: white;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-buttons .booking:hover {
+  color: white;
+  background-color: #08c19d;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.item-buttons .booking:before {
+  content: "";
+  background-image: url(../assets/icons/icons.png);
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: -18px 0px;
+  margin-right: 10px;
+}
+
+.item-buttons .booking:hover:before {
+  background-position: -18px -18px;
+}
+
+.item-buttons .trailer {
+  width: 90px;
+  height: 32px;
+  color: #0e819e;
+  border: 1px solid #0e819e;
+  background-color: white;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-buttons .trailer:before {
+  content: "";
+  background-image: url(../assets/icons/icons.png);
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: -38px 0px;
+  margin-right: 10px;
+}
+
+.item-buttons .trailer:hover:before {
+  background-position: -38px -18px;
+}
+
+.item-buttons .trailer:hover {
+  color: white;
+  background-color: #0e819e;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.hot1 .item-buttons .booking,
+.hot1 .item-buttons .trailer {
+  width: 160px;
+  height: 44px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media screen and (max-width:1200px) {
+  .hotmovies .items {
+    width: 950px;
+    height: 500px;
+  }
+
+  .hotmovies .item-body {
+    padding: 8px 11px;
+  }
+
+  .item-body {
+    min-width: 0px;
+  }
+
+  .hot1 .item-buttons .booking,
+  .hot1 .item-buttons .trailer {
+    width: 130px;
+  }
+}
+
+@media screen and (max-width:1030px) {
+  .hotmovies .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hotmovies .title {
+    writing-mode: horizontal-tb;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.025em;
+  }
+
+  .hotmovies .items {
+    width: 800px;
+    height: 500px;
+  }
+
+  .hot1 .item-buttons .booking,
+  .hot1 .item-buttons .trailer {
+    width: 100px;
+  }
+
+  .hotmovies .item-body.hot1 {
+    padding: 22px 10px;
+  }
+
+  .hotmovies .item-title.hot1 {
+    font-size: 30px;
+  }
+
+  .hotmovies .item-entitle.hot1 {
+    font-size: 16px;
+  }
+
+  .item-buttons .booking,
+  .item-buttons .trailer {
+    width: 75px;
+    height: 32px;
+  }
+
+  .item-buttons .booking:before,
+  .item-buttons .trailer:before {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width:849px) {
+  .hotmovies {
+    display: none;
+  }
+}
